@@ -202,7 +202,7 @@ namespace BrickBreaker
 
         public void WallCollision(UserControl UC)
         {
-            SoundPlayer wallstrike = new SoundPlayer(Properties.Resources.wallstrike);
+            SoundPlayer wallstrike = new SoundPlayer(Properties.Resources.Wallhitsound);
             // Collision with left wall
             if (x < 0)
             {

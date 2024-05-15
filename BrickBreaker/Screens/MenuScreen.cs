@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using WMPLib;
 
 namespace BrickBreaker
 {
@@ -19,11 +21,19 @@ namespace BrickBreaker
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+
+            //If endbutton is clicked
+            SoundPlayer strt = new SoundPlayer(Properties.Resources.bttn);
+            strt.Play();
+
             Application.Exit();
+
         }
 
         private void playButton_Click(object sender, EventArgs e)
         {
+            SoundPlayer cont = new SoundPlayer(Properties.Resources.bttn);
+            cont.Play();
             Cursor.Hide();
             // Goes to the game screen
             GameScreen gs = new GameScreen();
@@ -33,6 +43,7 @@ namespace BrickBreaker
             form.Controls.Remove(this);
 
             gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+
         }
 
   

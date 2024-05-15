@@ -386,6 +386,7 @@ namespace BrickBreaker
                 // Check for collision of ball with paddle, (incl. paddle movement)
                 ball.PaddleCollision(paddle);
                 SoundPlayer brickbroken = new SoundPlayer(Properties.Resources.brickbroken);
+                SoundPlayer brickstrike = new SoundPlayer(Properties.Resources.Bricksmash1);
 
                 // Check if ball has collided with any blocks
                 foreach (Block b in blocks)
@@ -397,10 +398,12 @@ namespace BrickBreaker
                             b.hp--;
                             if (b.hp == 0)
                             {
+                                brickbroken.Play();
                                 blocks.Remove(b);
                             }
                             else
                             {
+                                brickstrike.Play();
                                 b.currentTexture++;
                                 b.texture = b.textures[b.currentTexture];
                             }

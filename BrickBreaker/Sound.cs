@@ -29,12 +29,7 @@ namespace BrickBreaker
             audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic2));
             audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic3));
             audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic4));
-            audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic5));
             audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic6));
-            audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic7));
-            audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic8));
-            audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic9));
-            audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic10));
             audioClips.Add(new SoundPlayer(Properties.Resources.Idlemusic11));
 
 
@@ -50,41 +45,22 @@ namespace BrickBreaker
                 idle.Play();
             }
 
-            // While playing
-            foreach (Block block in blocks)
-            {
-                // If brick is struck, play brickstrike noise
-                if (ball.BlockCollision(b))
-                {
-                    SoundPlayer brickstrike = new SoundPlayer(Properties.Resources.brickbroken);
-                    brickstrike.Play();
-                }
-            }
-
             //If button clicked
 
-            // If cont button is clicked
-            //SoundPlayer cont = new SoundPlayer(Properties.Resources.bttn);
-            //cont.Play();
-            // If startbutton is clicked
-            //SoundPlayer strt = new SoundPlayer(Properties.Resources.bttn);
-            //strt.Play();
-            // If purchasebutton is clicked
-            //SoundPlayer HvaNgla = new SoundPlayer(Properties.Resources.HvaNgla);
+            //If purchasebutton is clicked
+            SoundPlayer HvaNgla = new SoundPlayer(Properties.Resources.HvaNgla);
             //HvaNgla.Play();
 
         }
 
         // While within location
 
-        Not present in this?
         public void Shopload(ShopScreen shopScreen)
         {
             // While shop is entered
             SoundPlayer shopidle = new SoundPlayer(Properties.Resources.shopidle);
             shopidle.PlayLooping();
         }
-        Not present in this?
         public void Scareload(scareScreen scareScreen)
         {
             // While deathscreen is entered
@@ -107,26 +83,18 @@ namespace BrickBreaker
             // If whiteboy
             if (d.debuff == 1)
             {
-                SoundPlayer crakka = new SoundPlayer(Properties.Resources.crakka);
-                crakka.Play();
             }
             // if hindupeace
-            if (d.debuff == 1)
+            if (d.debuff == 2)
             {
-                SoundPlayer swirleffect = new SoundPlayer(Properties.Resources.swirleffect);
-                swirleffect.Play();
             }
             // If freaky
-            if (d.debuff == 1)
+            if (d.debuff == 3)
             {
-                SoundPlayer freaky = new SoundPlayer(Properties.Resources.freaky);
-                freaky.Play();
             }
             // If blessingofwar (Use it for what it's for)
-            if (d.debuff == 1)
+            if (d.debuff == 4)
             {
-                SoundPlayer pantera = new SoundPlayer(Properties.Resources.pantera);
-                pantera.Play();
             }
         }
 

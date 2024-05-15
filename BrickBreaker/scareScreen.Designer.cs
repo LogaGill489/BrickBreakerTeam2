@@ -43,6 +43,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "scareScreen";
             this.Text = "PauseScreen";
+            this.Load += new System.EventHandler(this.scareScreen_Load);
             this.ResumeLayout(false);
 
         }

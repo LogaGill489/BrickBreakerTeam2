@@ -368,6 +368,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ShopScreen";
             this.Text = "ShopScreen";
+            this.Load += new System.EventHandler(this.ShopScreen_Load);
             this.ResumeLayout(false);
 
         }

@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace BrickBreaker
 {
@@ -19,6 +21,9 @@ namespace BrickBreaker
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //If endbutton is clicked
+            SoundPlayer strt = new SoundPlayer(Properties.Resources.bttn);
+            strt.Play();
             Application.Exit();
         }
     }

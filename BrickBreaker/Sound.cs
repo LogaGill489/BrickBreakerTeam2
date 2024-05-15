@@ -55,25 +55,26 @@ namespace BrickBreaker
 
         // While within location
 
-        public void Shopload(ShopScreen shopScreen)
-        {
-            // While shop is entered
-            SoundPlayer shopidle = new SoundPlayer(Properties.Resources.shopidle);
-            shopidle.PlayLooping();
-        }
-        public void Scareload(scareScreen scareScreen)
-        {
-            // While deathscreen is entered
-            SoundPlayer deathsudden = new SoundPlayer(Properties.Resources.deathsudden);
-            deathsudden.Play();
-        }
-        public void Menuload(MenuScreen menuScreen)
-        {
-            // While menu screen is entered 
-            SoundPlayer menuidle = new SoundPlayer(Properties.Resources.genericidle);
-            // Play after deathscream, and during menu
-            menuidle.Play();
-        }
+        //public void Shopload(ShopScreen shopScreen)
+        //{
+        //    // While shop is entered
+        //    SoundPlayer shopidle = new SoundPlayer(Properties.Resources.shopidle);
+        //    shopidle.PlayLooping();
+        //}
+        //public void Scareload(scareScreen scareScreen)
+        //{
+        //    // While deathscreen is entered
+        //    SoundPlayer deathsudden = new SoundPlayer(Properties.Resources.deathsudden);
+        //    deathsudden.Play();
+        //}
+        //WHY THE FUCK DOESN'T THIS SHIT WORK (pls fix)
+        //public void Menuload(MenuScreen menuScreen)
+        //{
+        //    // While menu screen is entered 
+        //    SoundPlayer menuidle = new SoundPlayer(Properties.Resources.genericidle);
+        //    // Play after deathscream, and during menu
+        //    menuidle.Play();
+        //}
 
         // Powerups collected
 

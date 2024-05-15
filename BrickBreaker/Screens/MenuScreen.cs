@@ -51,6 +51,10 @@ namespace BrickBreaker
         private void MenuScreen_Load(object sender, EventArgs e)
         {
             Cursor.Show();
+            // While menu screen is entered 
+            SoundPlayer menuidle = new SoundPlayer(Properties.Resources.genericidle);
+            // Play after deathscream, and during menu
+            menuidle.Play();
         }
 
         private void MenuScreen_Load_1(object sender, EventArgs e)

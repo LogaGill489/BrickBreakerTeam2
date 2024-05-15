@@ -35,7 +35,7 @@
             // diedBackLabel
             // 
             this.diedBackLabel.BackColor = System.Drawing.Color.Transparent;
-            this.diedBackLabel.Font = new System.Drawing.Font("Chiller", 80.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diedBackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 80.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diedBackLabel.ForeColor = System.Drawing.Color.DarkRed;
             this.diedBackLabel.Location = new System.Drawing.Point(12, 322);
             this.diedBackLabel.Name = "diedBackLabel";
@@ -47,7 +47,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Chiller", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Location = new System.Drawing.Point(554, 694);
             this.button1.Name = "button1";

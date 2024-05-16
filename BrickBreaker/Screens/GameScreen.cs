@@ -730,7 +730,6 @@ namespace BrickBreaker
             float widthScale = (float)Screen.PrimaryScreen.Bounds.Width / 1448;
             float heightScale = (float)Screen.PrimaryScreen.Bounds.Height / 700;
             float initalSize = 100 * widthScale;
-
             if (dB1)
             {
                 duration1++;

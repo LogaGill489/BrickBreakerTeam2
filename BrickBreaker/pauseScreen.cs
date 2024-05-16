@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BrickBreaker
 {
-    public partial class pauseScreen : Form
+    public partial class pauseScreen : UserControl
     {
         public pauseScreen()
         {

@@ -334,7 +334,7 @@ namespace BrickBreaker
             }
 
             //debuffs
-
+           
             if (dB1)
             {
                 duration1++;
@@ -471,14 +471,6 @@ namespace BrickBreaker
 
         public void OnEnd()
         {
-            // Goes to the game over screen
-            Form form = this.FindForm();
-            MenuScreen ps = new MenuScreen();
-
-            ps.Location = new Point((form.Width - ps.Width) / 2, (form.Height - ps.Height) / 2);
-
-            form.Controls.Add(ps);
-            form.Controls.Remove(this);
 
         }
 

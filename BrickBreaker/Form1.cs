@@ -37,7 +37,7 @@ namespace BrickBreaker
             else
             {
                 UserControl current = (UserControl)sender;  //create UserControl from sender
-                f = current.FindForm();                     //find Form UserControl is on
+                f = current.FindForm(); //find Form UserControl is on
                 f.Controls.Remove(current);                 //remove current UserControl
             }
 

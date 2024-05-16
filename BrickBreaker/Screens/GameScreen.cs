@@ -113,7 +113,7 @@ namespace BrickBreaker
         //whiteboy
         PictureBox whiteBoy = new PictureBox();
 
-        List<PictureBox> pictureDebuff = new List<PictureBox>();
+        List<PictureBox> debuff1 = new List<PictureBox>();
 
         // list of balls
 
@@ -136,6 +136,7 @@ namespace BrickBreaker
         //powerup durations 
 
         int pDuration1, pDuration2, pDuration3, pDuration4, pDuration5;
+        List<Rectangle> debuff1 = new List<Rectangle>();
 
         //Grady
         System.Windows.Media.MediaPlayer[] music =
@@ -491,6 +492,7 @@ namespace BrickBreaker
                 {
                     ball.ySpeed *= -1;
                     lives--;
+                    restartLevel = false;
                     PlaySound("\\Resources\\Minecraft Damage (Oof) - Sound Effect (HD).wav");
                     // SoundPlayer lifesubtracted = new SoundPlayer(Properties.Resources.lifesubtracted);
                     score.RemoveCombo();
@@ -630,25 +632,25 @@ namespace BrickBreaker
 
                                 if (rand.Next(1, 100) <= chance)
                                 {
-                                    int cCheck = rand.Next(1, 100);
+                                    int check = rand.Next(1, 100);
                                     int o = 0;
 
-                                    if (cCheck > 10 && cCheck < 20)
+                                    if (check > 10 && check < 20)
                                     {
                                         o = 1;
                                         debuffColor = Color.Green;
                                     }
-                                    else if (cCheck > 20 && cCheck < 50)
+                                    else if (check > 20 && check < 50)
                                     {
                                         o = 2;
                                         debuffColor = Color.Pink;
                                     }
-                                    else if (cCheck == 50)
+                                    else if (check == 50)
                                     {
                                         o = 3;
                                         debuffColor = Color.Black;
                                     }
-                                    else if (cCheck > 51 && cCheck < 62)
+                                    else if (check > 51 && check < 62)
                                     {
                                         o = 4;
                                         debuffColor = Color.White;
@@ -659,7 +661,7 @@ namespace BrickBreaker
                                         debuffColor = Color.Silver;
                                     }
 
-                                    Debuff newDebuff = new Debuff(3, b.hitBox.X + b.hitBox.Width / 2, b.hitBox.Y + b.hitBox.Width, debuffColor);
+                                    Debuff newDebuff = new Debuff(o, b.hitBox.X + b.hitBox.Width / 2, b.hitBox.Y + b.hitBox.Width, debuffColor);
 
                                     debuffs.Add(newDebuff);
                                 }
@@ -742,12 +744,12 @@ namespace BrickBreaker
                     vines.Image = Properties.Resources.IvyVine;
                     //vines.BackColor = Color.Transparent;
                     vines.BringToFront();
-                    pictureDebuff.Add(vines);
+                    debuff1.Add(vines);
                     vineLocatoin += (int)initalSize;
                 }
                 else if (duration1 < 100)
                 {
-                    foreach (PictureBox p in pictureDebuff)
+                    foreach (PictureBox p in debuff1)
                     {
                         p.Size = new Size((int)initalSize, grow);
                     }
@@ -756,7 +758,7 @@ namespace BrickBreaker
                 else if (duration1 < 200)
                 {
                     grow -= 10;
-                    foreach (PictureBox p in pictureDebuff)
+                    foreach (PictureBox p in debuff1)
                     {
                         p.Size = new Size((int)initalSize, grow);
                     }
@@ -765,7 +767,7 @@ namespace BrickBreaker
                 {
                     duration1 = 0;
                     dB1 = false;
-                    pictureDebuff.Clear();
+                    debuff1.Clear();
                     vineLocatoin = 130;
                 }
 
@@ -1241,7 +1243,7 @@ namespace BrickBreaker
             }
 
             // test
-            //e.Graphics.DrawRectangle(Pens.White, ball.x, ball.y, ball.size, ball.size);
+            e.Graphics.DrawRectangle(Pens.White, ball.x, ball.y, ball.size, ball.size);
             //foreach (Block block in blocks)
             //{
             //    e.Graphics.DrawRectangle(Pens.RoyalBlue, block.hitBox);

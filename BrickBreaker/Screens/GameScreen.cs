@@ -339,7 +339,7 @@ namespace BrickBreaker
             int ballX = this.Width / 2 - 10;
             int ballY = this.Height - paddle.height - 80;
 
-            // Creates a new ball
+            // Creates a new ball //
             int speedMod = 2;
             xSpeed = 15 * speedMod;
             ySpeed = -3 * speedMod;

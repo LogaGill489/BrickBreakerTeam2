@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace BrickBreaker
 {
-    public partial class ShopScreen : Form
+    public partial class shopScreen : UserControl
     {
-        public ShopScreen()
+        public shopScreen()
         {
             InitializeComponent();
 
             highPShelfLabel.BackColor = Color.FromArgb(160, 100, 100, 100);
             lowPShelfLabel.BackColor = Color.FromArgb(160, 100, 100, 100);
             sideBarLabel.BackColor = Color.FromArgb(160, 100, 100, 100);
-          
 
         }
     }

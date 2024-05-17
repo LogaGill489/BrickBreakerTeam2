@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BrickBreaker
 {
-    public partial class scareScreen : Form
+    public partial class scareSreen : UserControl
     {
-        public scareScreen()
+        public scareSreen()
         {
             InitializeComponent();
         }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BrickBreaker
 {
-    public partial class deathScreen : Form
+    public partial class deathScreen : UserControl
     {
         public deathScreen()
         {

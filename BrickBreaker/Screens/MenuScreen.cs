@@ -38,7 +38,7 @@ namespace BrickBreaker
         private void playButton_Click(object sender, EventArgs e)
         {
             Cursor.Hide();
-            Score.score =25000;
+            Score.score = 25000;
             // Goes to the game screen
             Form1.ChangeScreen(this, new realShopScreen());
             menuMusic.Stop();
